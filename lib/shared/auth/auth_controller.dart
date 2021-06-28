@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:payflow/shared/models/user_model.dart';
@@ -13,7 +12,7 @@ class AuthController {
     if (user != null) {
       _user = user;
       saveUser(user);
-      Navigator.pushReplacementNamed(context, "/home");
+      Navigator.pushReplacementNamed(context, "/home", arguments: user);
     } else {
       Navigator.pushReplacementNamed(context, "/login");
     }
